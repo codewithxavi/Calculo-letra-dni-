@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style type="text/css">
+
+  </style>
+</head>
+
+<body>
+  <script>
+    //crear el array de letra del dni
+    //funcion para calcular la letra del dni
+    //recuperar el numero del formulario
+    //calcular el resto de la división entre 23
+    //buscar letra en el array que corresponda al índice del resto
+    //concatenar la letra al final del numero
+    //mostrar dni completo
+    let continuar = true;
+    while (continuar) {
+      let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+      let numero = prompt("Introduce tu número de DNI");
+      if (numero < 0 || numero > 99999999) {
+        alert("El número proporcionado no es válido");
+      } else {
+        let letra = letras[numero % 23];
+        document.write(`DNI: ${numero}${letra}`);
+      }
+      continuar = confirm('Desea informar otro número?');
+      document.write('<br>');
+    }
+  </script>
+</body>
+
+</html>
